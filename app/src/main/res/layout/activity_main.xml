@@ -7,29 +7,6 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/textView4"
-        android:layout_width="299dp"
-        android:layout_height="32dp"
-        android:fontFamily="sans-serif-condensed-light"
-        android:text="Please enter your flight number:"
-        android:textColor="#2196F3"
-        android:textSize="24sp"
-        tools:layout_editor_absoluteX="56dp"
-        tools:layout_editor_absoluteY="307dp" />
-
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="121dp"
-        android:layout_height="35dp"
-        android:fontFamily="sans-serif-condensed-light"
-        android:text="Or"
-        android:textAlignment="center"
-        android:textColor="#2196F3"
-        android:textSize="24sp"
-        tools:layout_editor_absoluteX="145dp"
-        tools:layout_editor_absoluteY="430dp" />
-
-    <TextView
         android:id="@+id/textView"
         android:layout_width="278dp"
         android:layout_height="71dp"
@@ -49,25 +26,35 @@
         tools:layout_editor_absoluteX="136dp"
         tools:layout_editor_absoluteY="176dp" />
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="342dp"
-        android:layout_height="33dp"
-        android:fontFamily="sans-serif-condensed-light"
-        android:text="Either enter source or destination:"
-        android:textColor="#2196F3"
-        android:textSize="24sp"
-        tools:layout_editor_absoluteX="34dp"
-        tools:layout_editor_absoluteY="485dp" />
-
-    <EditText
-        android:id="@+id/editTextTextPersonName2"
-        android:layout_width="wrap_content"
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tablayout"
+        android:layout_width="409dp"
         android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="Flight Number"
-        android:inputType="textPersonName"
-        tools:layout_editor_absoluteX="100dp"
-        tools:layout_editor_absoluteY="365dp" />
+        app:tabIconTint="#093D55"
+        app:tabIndicatorColor="#093D55"
+        app:tabRippleColor="#093D55"
+        app:tabTextColor="#2196F3"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="326dp">
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/fnumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Flight Number" />
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/routes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Routes" />
+
+    </com.google.android.material.tabs.TabLayout>
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="375dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
