@@ -7,7 +7,7 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/App_title"
         android:layout_width="278dp"
         android:layout_height="71dp"
         android:fontFamily="sans-serif-condensed"
@@ -15,27 +15,36 @@
         android:textAlignment="center"
         android:textColor="#093D55"
         android:textSize="34sp"
-        tools:layout_editor_absoluteX="66dp"
-        tools:layout_editor_absoluteY="93dp" />
+        app:layout_constraintBottom_toTopOf="@+id/imageView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="139dp"
-        android:layout_height="114dp"
-        app:srcCompat="@drawable/aeroplane"
-        tools:layout_editor_absoluteX="136dp"
-        tools:layout_editor_absoluteY="176dp" />
+        android:layout_width="109dp"
+        android:layout_height="86dp"
+        android:layout_marginBottom="28dp"
+        app:layout_constraintBottom_toTopOf="@+id/tablayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/aeroplane" />
 
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/tablayout"
-        android:layout_width="409dp"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="348dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
         app:tabIconTint="#093D55"
         app:tabIndicatorColor="#093D55"
         app:tabRippleColor="#093D55"
-        app:tabTextColor="#2196F3"
-        tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="326dp">
+        app:tabTextColor="#2196F3">
 
         <com.google.android.material.tabs.TabItem
             android:id="@+id/fnumber"
@@ -52,9 +61,14 @@
     </com.google.android.material.tabs.TabLayout>
 
     <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/vpager"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="375dp" />
+        android:layout_marginBottom="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tablayout" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
