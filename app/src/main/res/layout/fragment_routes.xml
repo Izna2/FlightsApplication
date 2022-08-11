@@ -13,7 +13,7 @@
             android:layout_height="0dp"
             android:layout_marginTop="40dp"
             android:gravity="center"
-            android:text="Arrival:"
+            android:text="Destination"
             android:textColor="#2196F3"
             android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -25,39 +25,27 @@
             android:id="@+id/textView4"
             android:layout_width="402dp"
             android:layout_height="0dp"
-            android:layout_marginTop="36dp"
+            android:layout_marginTop="28dp"
             android:gravity="center"
-            android:text="Departure:"
+            android:text="Source"
             android:textColor="#2196F3"
             android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.444"
+            app:layout_constraintHorizontal_bias="0.888"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/arr" />
+            app:layout_constraintTop_toBottomOf="@+id/spinnerdestination" />
 
-        <EditText
-            android:id="@+id/arr"
-            android:layout_width="327dp"
-            android:layout_height="0dp"
-            android:layout_marginTop="12dp"
-            android:ems="10"
-            android:hint="Arrival Airport"
-            android:inputType="textPersonName"
+        <Spinner
+            android:id="@+id/spinnerdestination"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="28dp"
+            android:layout_marginRight="20dp"
+            android:padding="10dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView" />
-
-        <EditText
-            android:id="@+id/dep"
-            android:layout_width="327dp"
-            android:layout_height="0dp"
-            android:layout_marginTop="16dp"
-            android:ems="10"
-            android:hint="Departure Airport"
-            android:inputType="textPersonName"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
         <Button
             android:id="@+id/search_buttonr"
@@ -67,9 +55,19 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Spinner
+            android:id="@+id/spinnersource"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginRight="20dp"
+            android:padding="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/dep"
-            app:layout_constraintVertical_bias="0.169" />
+            app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

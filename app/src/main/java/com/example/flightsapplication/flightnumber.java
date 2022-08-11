@@ -1,5 +1,6 @@
 package com.example.flightsapplication;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -7,6 +8,8 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.EditText;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -15,6 +18,8 @@ import android.view.ViewGroup;
  */
 public class flightnumber extends Fragment {
 
+   public Button search;
+   public EditText flight_number,Date;
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -52,13 +57,33 @@ public class flightnumber extends Fragment {
         if (getArguments() != null) {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
+
         }
+
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+
+        View flightview =  inflater.inflate(R.layout.fragment_flightnumber, container, false);
+
+        search =flightview.findViewById(R.id.search_buttonf);
+        flight_number=flightview.findViewById(R.id.flight_number);
+        Date=flightview.findViewById(R.id.date);
+        search.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent in = new Intent(getContext(), Info_Display.class);
+                Bundle extras = new Bundle();
+                extras.putString("flight_no",flight_number.getText().toString());
+                extras.putString("flight_date",Date.getText().toString());
+                // i.putExtra(“theValue", 997.5);
+                in.putExtras(extras);
+                startActivity(in);
+            }
+        });
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_flightnumber, container, false);
+        return flightview;
     }
 }

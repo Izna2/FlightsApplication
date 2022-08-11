@@ -1,0 +1,420 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Info_Display">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/flighttxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="80dp"
+                android:fontFamily="sans-serif-condensed"
+                android:padding="5dp"
+                android:text="Flight"
+                android:textAlignment="center"
+                android:textColor="#093D55"
+                android:textSize="34sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/flight_numbertxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="180dp"
+                android:fontFamily="sans-serif-condensed"
+                android:padding="5dp"
+                android:text="AB123"
+                android:textAlignment="center"
+                android:textColor="#093D55"
+                android:textSize="34sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/flight_statustxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-condensed"
+            android:padding="10dp"
+            android:text="Flight Status"
+            android:textAlignment="center"
+            android:textColor="#3ECC17"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/onway_img"
+            android:layout_width="373dp"
+            android:layout_height="38dp"
+            android:layout_marginBottom="20dp"
+            app:srcCompat="@drawable/destination" />
+
+        <ScrollView
+            android:id="@+id/scrollView3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#093D55"
+            android:paddingBottom="20dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="20dp">
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="36dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginRight="5dp"
+                    android:background="#1875A0"
+                    android:padding="5dp"></View>
+
+
+                <TextView
+                    android:id="@+id/textView12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="80dp"
+                    android:layout_marginTop="32dp"
+                    android:fontFamily="sans-serif-condensed"
+                    android:padding="5dp"
+                    android:text="Departs"
+                    android:textAlignment="center"
+                    android:textColor="#F8F6F6"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/date_deptxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="150dp"
+                    android:layout_marginTop="32dp"
+                    android:fontFamily="sans-serif-condensed"
+                    android:padding="5dp"
+                    android:text="Date"
+                    android:textColor="#F6F5F5"
+                    android:textSize="16sp" />
+
+
+                <ImageView
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_marginTop="15dp"
+                    android:src="@drawable/circle" />
+
+
+                <TextView
+                    android:id="@+id/departuretxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="30dp"
+                    android:padding="5dp"
+                    android:text="DEP"
+                    android:textAlignment="center"
+                    android:textColor="#F6F3F3"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toStartOf="@+id/textView12"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/airport_deptxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="80dp"
+                    android:layout_marginTop="90dp"
+                    android:fontFamily="sans-serif-condensed"
+                    android:padding="5dp"
+                    android:text="xyz International Airport"
+                    android:textColor="#F6F5F5"
+                    android:textSize="16sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginLeft="80dp"
+                    android:layout_marginTop="120dp"
+                    android:layout_marginRight="5dp"
+                    android:background="#1875A0"
+                    android:padding="5dp"></View>
+
+                <TextView
+                    android:id="@+id/terminal_deptxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="120dp"
+                    android:layout_marginRight="5dp"
+                    android:fontFamily="sans-serif-condensed"
+                    android:padding="5dp"
+                    android:text="-"
+                    android:textAlignment="center"
+                    android:textColor="#F8F6F6"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/textView18"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="80dp"
+                    android:layout_marginTop="120dp"
+                    android:fontFamily="sans-serif-condensed"
+                    android:padding="5dp"
+                    android:text="Terminal"
+                    android:textAlignment="center"
+                    android:textColor="#F8F6F6"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="80dp"
+                    android:layout_marginTop="155dp"
+                    android:fontFamily="sans-serif-condensed"
+                    android:padding="5dp"
+                    android:text="Scheduled"
+                    android:textAlignment="center"
+                    android:textColor="#F8F6F6"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/time_deptxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="155dp"
+                    android:layout_marginRight="5dp"
+                    android:fontFamily="sans-serif-condensed"
+                    android:padding="5dp"
+                    android:text="00:00"
+                    android:textAlignment="center"
+                    android:textColor="#F8F6F6"
+                    android:textSize="16sp" />
+
+
+                <ImageView
+                    android:id="@+id/imageView10"
+                    android:layout_width="20dp"
+                    android:layout_height="150dp"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="85dp"
+                    app:srcCompat="@drawable/whiteline" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="36dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="246dp"
+                    android:layout_marginRight="5dp"
+                    android:background="#1875A0"
+                    android:padding="5dp"></View>
+
+
+                <ImageView
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_marginTop="230dp"
+                    android:src="@drawable/circle" />
+
+                <TextView
+                    android:id="@+id/arrivaltxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="245dp"
+                    android:padding="5dp"
+                    android:text="ARR"
+                    android:textAlignment="center"
+                    android:textColor="#F8F6F6"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    tools:layout_editor_absoluteX="38dp"
+                    tools:layout_editor_absoluteY="313dp" />
+
+
+                <TextView
+                    android:id="@+id/textView22"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="80dp"
+                    android:layout_marginTop="248dp"
+                    android:fontFamily="sans-serif-condensed"
+                    android:padding="5dp"
+                    android:text="Arrives"
+                    android:textAlignment="center"
+                    android:textColor="#F8F6F6"
+                    android:textSize="16sp" />
+
+                <TextView
+
+                    android:id="@+id/date_arrtxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="145dp"
+                    android:layout_marginTop="248dp"
+                    android:fontFamily="sans-serif-condensed"
+                    android:padding="5dp"
+                    android:text="Date"
+                    android:textColor="#F6F5F5"
+                    android:textSize="16sp"
+                    tools:layout_editor_absoluteX="163dp"
+                    tools:layout_editor_absoluteY="322dp" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/airport_arrtxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="80dp"
+                    android:layout_marginTop="306dp"
+                    android:fontFamily="sans-serif-condensed"
+                    android:padding="5dp"
+                    android:text="xyz International Airport"
+                    android:textColor="#F6F5F5"
+                    android:textSize="16sp"
+                    tools:layout_editor_absoluteX="101dp"
+                    tools:layout_editor_absoluteY="403dp">
+
+                </TextView>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginLeft="80dp"
+                    android:layout_marginTop="336dp"
+                    android:layout_marginRight="5dp"
+                    android:background="#1875A0"></View>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="80dp"
+                    android:layout_marginTop="336dp"
+                    android:fontFamily="sans-serif-condensed"
+                    android:padding="5dp"
+                    android:text="Terminal"
+                    android:textAlignment="center"
+                    android:textColor="#F8F6F6"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/terminal_arrtxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="336dp"
+                    android:layout_marginRight="5dp"
+                    android:fontFamily="sans-serif-condensed"
+                    android:padding="5dp"
+                    android:text="3"
+                    android:textAlignment="center"
+                    android:textColor="#F8F6F6"
+                    android:textSize="16sp" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="80dp"
+                    android:layout_marginTop="371dp"
+                    android:fontFamily="sans-serif-condensed"
+                    android:padding="5dp"
+                    android:text="Scheduled"
+                    android:textAlignment="center"
+                    android:textColor="#F8F6F6"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/time_arrtxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="371dp"
+                    android:layout_marginRight="5dp"
+                    android:fontFamily="sans-serif-condensed"
+                    android:padding="5dp"
+                    android:text="00:00"
+                    android:textAlignment="center"
+                    android:textColor="#F8F6F6"
+                    android:textSize="16sp" />
+
+
+                <!--TextView
+                android:id="@+id/textView24"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-condensed"
+                android:text="Country ABC"
+                android:textColor="#F6F5F5"
+                android:textSize="16sp" /-->
+
+                <!--TextView
+                android:id="@+id/textView15"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-condensed"
+                android:text="Country ABC"
+                android:textColor="#F6F5F5"
+                android:textSize="16sp"
+                tools:layout_editor_absoluteX="157dp"
+                tools:layout_editor_absoluteY="94dp" /-->
+
+                <!--TextView
+                android:id="@+id/textView26"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-condensed"
+                android:text="City xyz"
+                android:textColor="#F6F5F5"
+                android:textSize="16sp"
+                tools:layout_editor_absoluteX="101dp"
+                tools:layout_editor_absoluteY="370dp" /-->
+
+                <!--TextView
+                android:id="@+id/textView13"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-condensed"
+                android:text="City xyz"
+                android:textColor="#F6F5F5"
+                android:textSize="16sp" /-->
+
+
+            </RelativeLayout>
+
+
+        </ScrollView>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
